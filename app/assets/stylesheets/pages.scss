@@ -1,3 +1,31 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+ @import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+
+ html,body {
+   height:100%;
+ }
+
+ h1 {
+   font-family: 'Antic Slab', serif;
+   font-size:80px;
+   color:#FFF;
+ }
+
+ .lead {
+ 	color:#FFF;
+ }
+
+
+ /* Custom container */
+ .container-full {
+   margin: 0 auto;
+   width: 100%;
+   min-height:100%;
+   background-color:#110022;
+   color:#eee;
+   overflow:hidden;
+ }
