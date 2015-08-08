@@ -3,4 +3,7 @@ class PagesController < ApplicationController
   end
   def about
   end
+
+  def test
+  end
 end
