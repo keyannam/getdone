@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show, :edit, :update, :destroy, :change]
 
   def index
     @to_do = current_user.tasks.where(state: "to_do")
@@ -40,6 +40,11 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
       redirect_to tasks_url, notice: 'Task was successfully destroyed.'
+  end
+
+  def change
+    @task.update_attributes(state: params[:state])
+      redirect_to tasks_path, notice: "Task Updated"
   end
 
   private
